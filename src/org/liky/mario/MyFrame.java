@@ -52,7 +52,7 @@ public class MyFrame extends JFrame implements KeyListener {
 	
 	
 	@Override
-	public void paintComponents(Graphics g) {
+	public void paint(Graphics g) {
 		// TODO Auto-generated method stub
 		//super.paintComponents(arg0);
 		// 建立临时的缓冲图片
