@@ -26,17 +26,24 @@ public class StaticValue {
 	
 	public static List<BufferedImage>allObstructionImage = new ArrayList<BufferedImage>();
 	
-	public static BufferedImage marioDeadImge = null;
+	public static BufferedImage marioDeadImage = null;
 	
-	public static String imagePath = System.getProperty("user.dir")+"/src";
+	public static String imagePath = System.getProperty("user.dir")+"/src/";
+	
+	//public static String imagePath = System.getProperty("C:\Users\\Administrator\\Desktop\\Mario\\src");
+	
+	
 	
 	//将全部照片初始化
 	public static void init() {
+		
 		// 将Mario所有图片导入静态属性中
 		for(int i = 1; i <= 10; i++) {
 		//	ImageIO.read(new File(System.getProperty("user.dir")"/bin/"+i+".gif"));
 		//	ImageIO.read(new File(System.getProperty("user.dir")"/src"+i+".gif"));
 			try {
+		//		File filetest = new File(imagePath+i+".gif");
+		//		System.out.println(filetest);
 				allMarioImage.add(ImageIO.read(new File(imagePath+i+".gif")));
 			}catch (IOException e) {
 				e.printStackTrace();
@@ -60,10 +67,10 @@ public class StaticValue {
 				}
 				
 				if(i <= 3 ) {
-					allFlowerImage.add(ImageIO.read(new File(imagePath+"triangle"+i+".gif")));
+					allTriangleImage.add(ImageIO.read(new File(imagePath+"triangle"+i+".gif")));
 				}
 				
-				allFlowerImage.add(ImageIO.read(new File(imagePath+"Turtle"+i+".gif")));
+				allTurtleImage.add(ImageIO.read(new File(imagePath+"Turtle"+i+".gif")));
 				
 				
 			} catch (IOException e) {
@@ -75,7 +82,7 @@ public class StaticValue {
 		// 导入障碍物的图片
 		for(int i = 1; i <= 12; i++ ) {
 			try {
-				allFlowerImage.add(ImageIO.read(new File(imagePath+"ob"+i+".gif")));
+				allObstructionImage.add(ImageIO.read(new File(imagePath+"ob"+i+".gif")));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -85,7 +92,7 @@ public class StaticValue {
 		// 导入Mario死亡的照片
 		
 		try {
-			allFlowerImage.add(ImageIO.read(new File(imagePath+"over.gif")));
+			marioDeadImage = ImageIO.read(new File(imagePath+"over.gif"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
