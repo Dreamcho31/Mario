@@ -33,6 +33,10 @@ public class StaticValue {
 	//public static String imagePath = System.getProperty("C:\Users\\Administrator\\Desktop\\Mario\\src");
 	
 	
+<<<<<<< HEAD
+=======
+	public static String imagePath = System.getProperty("user.dir")+"/src/";
+>>>>>>> 5c1793a32198be149019876d8d228dff7c35574a
 	
 	//将全部照片初始化
 	public static void init() {
@@ -42,8 +46,12 @@ public class StaticValue {
 		//	ImageIO.read(new File(System.getProperty("user.dir")"/bin/"+i+".gif"));
 		//	ImageIO.read(new File(System.getProperty("user.dir")"/src"+i+".gif"));
 			try {
+<<<<<<< HEAD
 		//		File filetest = new File(imagePath+i+".gif");
 		//		System.out.println(filetest);
+=======
+	//			System.out.println(imagePath);
+>>>>>>> 5c1793a32198be149019876d8d228dff7c35574a
 				allMarioImage.add(ImageIO.read(new File(imagePath+i+".gif")));
 			}catch (IOException e) {
 				e.printStackTrace();
