@@ -108,6 +108,10 @@ public class MyFrame extends JFrame implements KeyListener,Runnable {
 		if(ke.getKeyCode() == 37) {
 			this.mario.leftMove();
 		}
+		//当摁下32时（空格》）,mario 开始跳跃
+		if(ke.getKeyCode() == 32) {
+			this.mario.jump();
+		}		
 	}
 
 	//当抬起键盘上某一个键时
@@ -119,8 +123,14 @@ public class MyFrame extends JFrame implements KeyListener,Runnable {
 		}
 		//当摁下37时（--》）,mario 向右移动
 		if(ke.getKeyCode() == 37) {
-			this.mario.lefeStop();
+			this.mario.leftStop();
 		}
+		
+		//当按下32时，（空格），mario 开始跳跃
+		if(ke.getKeyCode() == 32) {
+			this.mario.down();
+		}
+		
 	}
 
 	//当键盘输入一些信息时
